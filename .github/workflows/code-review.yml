@@ -18,3 +18,7 @@ jobs:
       - uses: anglesen1120/code-review-agent@v1
         with:
           api-key: ${{ secrets.DEEPSEEK_API_KEY }}
+          # PAT is required for the agent to auto-resolve the threads it posts
+          # (GITHUB_TOKEN can post but cannot resolve review threads).
+          github-token: ${{ secrets.CODE_REVIEW_TOKEN }}
+          bot-login: anglesen1120
