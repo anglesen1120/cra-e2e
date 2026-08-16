@@ -19,3 +19,5 @@ function getUser(id) {
 }
 
 module.exports = { searchOrders, getUser };
+
+// trivial E2E noop comment
